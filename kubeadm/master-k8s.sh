@@ -1,8 +1,9 @@
 #!/bin/bash
 # Common stages for both master and worker nodes
 # This can be use as user data in launch template or launch configutions
-sudo -i 
 sudo hostnamectl set-hostname master
+sudo -i 
+
 sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
